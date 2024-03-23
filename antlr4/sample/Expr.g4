@@ -24,14 +24,14 @@ NovaLinha: [\r\n]+ -> skip; // Trata novas linhas
 prog: expr+ EOF;
 
 
-expr: termo
-    | Parentese_esquerda expr expr operador Parentese_direita;
+expr: termo | Parentese_esquerda expr Parentese_direita;
 
-termo: fator
-     | Parentese_esquerda termo termo operador Parentese_direita;
-
-fator: numero;
+termo: numero
+     | Parentese_esquerda expr Parentese_direita
+     | termo termo operador;
 
 numero: Numero;
+
+
 
 operador: Operador_soma | Operador_subtracao | Operador_multiplicacao | Operador_divisao_inteiros | Operador_resto_divisao | Operador_potencia | Operador_divisao_real;
