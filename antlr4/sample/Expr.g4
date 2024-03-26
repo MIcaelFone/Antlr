@@ -16,14 +16,13 @@ Comando_mem: 'MEM';
 fragment Digito: [0-9];
 
 // Regras da gramática
-Espaco: [ \t]+ -> skip; // Trata espaços em branco e tabulações
+ 
 
 NovaLinha: [\r\n]+ -> skip; // Trata novas linhas
 
-prog: linha+ EOF;
+prog: linha+ NovaLinha;
 
-linha: expr  ; 
-
+linha: expr; 
 
 expr: Numero
      | Numero? Comando_mem
@@ -31,9 +30,10 @@ expr: Numero
      | expr Comando_mem
      | expr Comando_res
      | Comando_mem expr?
-     | Comando_res expr?
      | Parentese_esquerda expr Parentese_direita
      | expr expr operador
      ;
+
 operador: Operador_soma | Operador_subtracao | Operador_multiplicacao | Operador_divisao_inteiros | Operador_resto_divisao | Operador_potencia | Operador_divisao_real;
 
+WS: [ \t]+ -> skip; 
