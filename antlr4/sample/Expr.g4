@@ -7,9 +7,7 @@ NUMERO_FLOAT_NEGATIVO : '-' [1-9] [0-9]* ('.' [0-9]+)? | '-' '0' '.' [0-9]+ ;
 NUMERO_ZERO : '0' ;
 NOVALINHA: [\r\n]+ ;
 
-
 prog: (expr NOVALINHA)* EOF ;
-
 
 expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' numero_zero numero_zero '/' ')'
@@ -24,7 +22,6 @@ expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' numero_real numero_real '+' ')'
      | '(' numero_real numero_real '-' ')'
      | '(' numero_real numero_real '*' ')' 
-     | '(' numero_real numero_real '*' ')'     
      | '(' expr expr operador ')'
      | '(' numero_real expr  operador ')'
      | '(' expr* ')'
@@ -36,6 +33,9 @@ expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' numero_real 'MEM' expr operador ')'  
      | '(' numero_inteiro_positivo 'RES' ')'  
      | '(' numero_inteiro_positivo 'RES' expr ')' 
+     | '(' numero_inteiro_positivo 'RES' expr operador ')' 
+     | '(' expr numero_inteiro_positivo 'RES'  ')' 
+     | '(' expr numero_inteiro_positivo 'RES' operador  ')' 
      | '(' expr 'RES' ')'  
      | '(' expr 'RES' expr ')' ;
 
