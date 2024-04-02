@@ -56,4 +56,3 @@ Para utilizar os códigos neste repositório, siga os passos abaixo:
 
 Este projeto foi desenvolvido como parte da disciplina "Construção de Interpretadores", como projeto avaliativo RA1, correspondendo a 100% da nota da referida avaliação.
 
- - Relatório de conformidade: https://drive.google.com/file/d/1CAhd2u5k3nUFeqpYLhqAL7hfCrttsHh-/view?usp=drive_link
