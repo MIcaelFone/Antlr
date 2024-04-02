@@ -1,4 +1,4 @@
-//Nomes: Micael Daniel , Thiago Rosa ,Bruno Feliciano,Pedro Antonio
+//Nomes: Bruno Feliciano, Micael Daniel, Pedro Antonio, Thiago Rosa 
 grammar Expr;
 
 //Analise lexica
