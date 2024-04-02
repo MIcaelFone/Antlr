@@ -8,7 +8,7 @@ NUMERO_INTEIRO_NEGATIVO : '-' [1-9] [0-9]* ; // token representa números inteir
 NUMERO_FLOAT_POSITIVO : [1-9] [0-9]* ('.' [0-9]+)? | NUMERO_ZERO '.' [0-9]+ ; // um token representa números decimais positivo e maiores do que 0 com um mais digitos antes do ponto e um ou mais digitos depois do ponto
 NUMERO_FLOAT_NEGATIVO : '-' [1-9] [0-9]* ('.' [0-9]+)? | '-' NUMERO_ZERO '.' [0-9]+ ; // um token representa  números decimais negativo e maiores do que 0 com um mais digitos antes do ponto e um ou mais digitos depois do ponto
 NUMERO_ZERO : [0] ;  // token representa o digito zero
-NOVALINHA: [\r\n]+ ; // token de quebra de linha  
+NOVALINHA: [\r\n]+ ; // token de quebra de linha 
 
 //Analise sintatica
 
