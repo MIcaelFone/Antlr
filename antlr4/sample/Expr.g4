@@ -16,14 +16,11 @@ prog: (expr NOVALINHA)* ;
 
 expr:  
      '(' numero_inteiro numero_inteiro_semzero '/'  ')' //operação de divisão real de um numero numero inteiro por outro numero inteiro que não seja zero
-     | '(' numero_zero numero_zero '/' ')' //operação de divisão inteiro de um numero zero por outro zero
      | '(' numero_inteiro numero_inteiro_semzero '|' ')' // operação de divisão real com numero numero inteiro por outro numero inteiro que não seja zero
      | '(' numero_inteiro numero_float_semzero '|' ')'// operação de divisão real com numero inteiro por outro numero float que não seja zero  
      | '(' numero_float numero_inteiro_semzero '|' ')' // operação de divisão real com numero float  por outro numero inteiro  que não seja zero
      | '(' numero_float numero_float_semzero '|' ')' //  operação de divisão real com numero float  por outro numero float  que não seja zero
-     | '(' numero_zero numero_zero '|' ')' //operação de divisão real de um numero zero por outro zero
      | '(' numero_inteiro numero_inteiro_semzero '%' ')' // operação de resto de um numero inteiro por outro numero inteiro que não seja zero
-     | '(' numero_zero numero_zero '%' ')' //operação de resto de um numero zero por outro zero
      | '(' numero_real numero_inteiro_positivo '^' ')' //operação de potenciação de um numero real elevado a  um numero inteiro positivo
      | '(' numero_real numero_real '+' ')' // operacao de soma de um numero real com outro numero real
      | '(' numero_real numero_real '-' ')' // operacao de subtração de um numero real com outro numero real
