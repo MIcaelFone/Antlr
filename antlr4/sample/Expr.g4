@@ -1,3 +1,4 @@
+//Nomes: Micael Daniel , Thiago ,Bruno Feliciano,Pedro Antonio
 grammar Expr;
 
 NUMERO_INTEIRO_POSITIVO : [1-9] [0-9]* ;
@@ -9,7 +10,8 @@ NOVALINHA: [\r\n]+ ;
 
 prog: (expr NOVALINHA)* EOF ;
 
-expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
+expr:  '(' expr expr operador ')' 
+     |'(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' numero_zero numero_zero '/' ')'
      | '(' numero_inteiro numero_inteiro_semzero '|' ')'
      | '(' numero_inteiro numero_float_semzero '|' ')'
@@ -24,7 +26,6 @@ expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' numero_real numero_real '*' ')' 
      | '(' expr expr operador ')'
      | '(' numero_real expr  operador ')'
-     | '(' expr* ')'
      | '(' numero_real 'MEM' ')' 
      | '(' 'MEM' ')'
      | '(' expr 'MEM' ')'
@@ -32,12 +33,11 @@ expr: '(' numero_inteiro numero_inteiro_semzero '/'  ')'
      | '(' 'MEM' expr operador ')'
      | '(' numero_real 'MEM' expr operador ')'  
      | '(' numero_inteiro_positivo 'RES' ')'  
-     | '(' numero_inteiro_positivo 'RES' expr ')' 
      | '(' numero_inteiro_positivo 'RES' expr operador ')' 
-     | '(' expr numero_inteiro_positivo 'RES'  ')' 
-     | '(' expr numero_inteiro_positivo 'RES' operador  ')' 
-     | '(' expr 'RES' ')'  
-     | '(' expr 'RES' expr ')' ;
+     | '(' expr numero_inteiro_positivo 'RES' ')'  
+     | '(' expr 'RES'  ')' 
+     | '(' expr 'RES' expr  ')'
+     | '(' expr 'RES' expr operador  ')' ;
 
 operador : '+' | '-' | '*' | '/' | '%' | '^' | '|' ;
 
