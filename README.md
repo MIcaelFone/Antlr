@@ -17,7 +17,7 @@ The aim of this project was to create lexical and syntactic analyzers for a calc
 To use the codes in this repository, follow the steps below:
 
 1. Set up the necessary environment variables for Antlr.
-2. Compile the grammar using the `antlr4 Expr.g4` script.
+2. For the creation of the java files, use `antlr4 Expr.g4` script.
 3. Compile the generated files and necessary Java classes using the `compile Expr*.java` script.
 4. Run tests using the command `type arquivo_de_calculo.txt | grun Expr prog -gui`.
 
@@ -48,7 +48,7 @@ O objetivo deste projeto foi criar analisadores léxicos e sintáticos para uma 
 Para utilizar os códigos neste repositório, siga os passos abaixo:
 
 1. Configure as variáveis de ambiente necessárias para o Antlr.
-2. Compile a gramática utilizando o script `antlr4 Expr.g4`.
+2. Para gerar os arquivos java utilize `antlr4 Expr.g4`.
 3. Compile os arquivos gerados e as classes Java necessárias utilizando o script `compile Expr*.java`.
 4. Execute os testes utilizando o comando `type arquivo_de_calculo.txt | grun Expr prog -gui`.
 
