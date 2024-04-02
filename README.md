@@ -23,7 +23,7 @@ To use the codes in this repository, follow the steps below:
 
 ## Course
 
-This project was developed as part of the "Interpreter Construction" course, as the RA1 assessment project, corresponding to 60% of the grade for this assessment.
+This project was developed as part of the "Interpreter Construction" course, as the RA1 assessment project, corresponding to 100% of the grade for this assessment.
 
 
 ==========================================================================
