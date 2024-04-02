@@ -26,7 +26,7 @@ To use the codes in this repository, follow the steps below:
 This project was developed as part of the "Interpreter Construction" course, as the RA1 assessment project, corresponding to 60% of the grade for this assessment.
 
 
-==========================================================================================================================================================================================
+============================================================================
 
 
 # Construção de Interpretadores - Projeto Avaliativo RA1
