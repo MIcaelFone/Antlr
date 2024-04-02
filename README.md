@@ -1,3 +1,32 @@
+# Interpreter Construction - Assessment Project RA1
+
+This repository contains the codes developed by the group composed of Bruno Feliciano, Micael Fone, Pedro Nazario, and Thiago Rosa, as part of the RA1 assessment project for the "Interpreter Construction" course.
+
+## Description
+
+The aim of this project was to create lexical and syntactic analyzers for a calculator using the Antlr tool. The analyzers are capable of interpreting mathematical expressions as defined in the developed grammar.
+
+## Repository Structure
+
+- **lib**: Contains the JAR file with Antlr binaries.
+- **bin**: Contains shell scripts used to work with Antlr, including `antlr4.bat`, `compile.bat`, and `grun.bat`.
+- **sample**: Contains the developed grammar and test files for the calculator.
+
+## Usage
+
+To use the codes in this repository, follow the steps below:
+
+1. Set up the necessary environment variables for Antlr.
+2. Compile the grammar using the `antlr4.bat` script.
+3. Compile the generated files and necessary Java classes using the `compile.bat` script.
+4. Run tests using the command `type arquivo_de_calculo.txt | grun Expr prog -gui`.
+
+## Course
+
+This project was developed as part of the "Interpreter Construction" course, as the RA1 assessment project, corresponding to 60% of the grade for this assessment.
+
+
+
 # Construção de Interpretadores - Projeto Avaliativo RA1
 
 Este repositório contém os códigos desenvolvidos pelo grupo composto por Bruno Feliciano, Micael Fone, Pedro Nazario e Thiago Rosa, como parte do projeto avaliativo RA1 da disciplina "Construção de Interpretadores".
